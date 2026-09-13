@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cool Game</title>
+</head>
+<body>
+    <canvas id="game-canvas" width="800" height="640"></canvas>
+    <canvas id="tile-picker-canvas" width="512" height="512" class="editor"></canvas>
+    <canvas id="selected-tile-canvas" width="128" height="128" class="editor"></canvas>
+    <div id="editor-controls" class="editor">
+        <form action="" id="selected-tile-form">
+            <label for="tile-name">Tile Name:</label>
+            <input type="text" name="tile-name" id="tile-name">
+
+            <label for="tile-is-pass">Is Passable:</label>
+            <input type="checkbox" name="tile-is-pass" id="tile-is-pass">
+
+            <label for="tile-is-obj">Is Object:</label>
+            <input type="checkbox" name="tile-is-obj" id="tile-is-obj">
+
+            <button type="submit">Update</button>
+        </form>
+        <form action="" id="save-level-form">
+            <label for="level-name">Level Name:</label>
+            <input type="text" name="level-name" id="level-name">
+            <button name="submit" id="save-level">Save Level</button>
+        </form>
+        <form action="" id="load-level-form">
+            <button name="submit" id="load-level">Load Level</button>
+            <input type="file" id="load-level-file-input" accept=".json" />
+        </form>
+    </div>
+    <script src="globals.js"></script>
+    <script src="ECS/ecs.js"></script>
+    <script src="ECS/components.js"></script>
+    <script src="ECS/systems.js"></script>
+    <script src="ECS/ai-systems.js"></script>
+    <script src="ECS/entity-templates.js"></script>
+    <script src="util.js"></script>
+    <script src="level-loader.js"></script>
+    <script src="input.js"></script>
+    <script src="level1.js"></script>
+    <script src="map.js"></script>
+    <script src="editor.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
